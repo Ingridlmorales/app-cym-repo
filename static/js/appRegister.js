@@ -1,3 +1,3 @@
 function registerUser(){
-    alert("Botón de registrar usuario")
+    alert("Botón de registrar clickeado")
 }

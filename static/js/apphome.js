@@ -1,7 +1,7 @@
-function registerPage(){
-    alert("Botón de registrar clickeado")
+function register(){
+    window.location = "/register_page"
 }
 
-function consultPage(){
+function consult(){
     alert("Botoón de ocnsultar clickeado")
 }
