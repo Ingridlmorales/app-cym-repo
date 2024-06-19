@@ -3,5 +3,5 @@ function register(){
 }
 
 function consult(){
-    alert("Botoón de ocnsultar clickeado")
+    window.location = "/consult_page"
 }
