@@ -6,7 +6,14 @@ function consult_user() {
     }
     fetch("/consult_user", {
         "method":"post",
-        "header":{"Content-Type":"application/json"},
+        "headers":{"Content-Type":"application/json"},
         "body":JSON.stringify(obj_user)
+    })
+    .then(resp => resp.json()) //convertir a json
+    .then(data => {
+        alert(data)
+    })
+    .catch(err => {
+        alert("Error: " + err)
     })
 }

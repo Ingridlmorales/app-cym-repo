@@ -13,10 +13,10 @@ def register_page():
 def consult_page():
     return func_consult_page()
     
-@app.route("/register_user", methods=["POST"])
+@app.route("/register_user", methods=["post"])
 def register_user():
     return func_register_user()
     
-@app.route("/consult_user", methods=["POST"])
+@app.route("/consult_user", methods=["post"])
 def consult_user():
     return func_consult_user()

@@ -22,10 +22,8 @@ def func_register_user():
         return "<h1> Error: no fue posible crear el user </h1>"
         
 def func_consult_user():
-    print("GOOD")
     obj_user = request.get_json()
     id = obj_user["id"]
     passw = obj_user["passw"]
-    print("Hola")
-    print(id)
+    consult_user(id)
     return "OK"
