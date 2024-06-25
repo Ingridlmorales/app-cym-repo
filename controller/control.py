@@ -1,5 +1,6 @@
 from flask import render_template, request
 from database.db import *
+from controller.admin_s3 import *
 
 def func_home_page():
     return render_template("home.html")
@@ -15,7 +16,10 @@ def func_register_user():
     name = request.form["name"]
     lastname = request.form["lastname"]
     birthday = request.form["birthday"]
+    photo = request.files["photo"]
     confirm_user = add_user(id, name, lastname, birthday)
+    connection_s3()
+    save_file(photo)
     if confirm_user:
         return "<h1> Usuario creado exitosamente </h1>"
     else:
